@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
- 
-// import Router from './router'
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(
-    <div>
-        {/* <Router/> */}
-    </div>
-, document.getElementById('app'));
+import './styles/index.css';
+import './utils/rem';
+import './utils/iconfont';
+
+ReactDOM.render(<App />, document.getElementById('root'));
+registerServiceWorker();

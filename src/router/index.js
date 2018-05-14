@@ -1,32 +1,31 @@
 /**
- * File Created: 2018-05-07 5:42:55 pm
+ * File Created: 2018-05-14 4:45:31 pm
  * Author: shanhaohui
  * -----
- * Last Modified: 2018-05-07 6:42:41 pm
+ * Last Modified: 2018-05-14 5:12:21 pm
  * Modified By: shanhaohui
  * -----
  * Copyright (c) 2018 rongyi
  */
 
-
 import React from 'react'
-import {Route, Switch, Redirect, HashRouter} from 'react-router-dom'
-import { css } from 'glamor'
-import {routes, loyoutRouterMap, notLoyoutRouterMap} from './config'
-import { AnimatedSwitch } from 'react-router-transition'
-import Loyout from 'src/App'
+import {Route, Switch} from 'react-router-dom'
+import {routerMap} from './config'
 
 const renderRouteComponent = routes => routes.map( (route, index) => {
-	return <Route key={index} {...route}/>
+  return <Route key={index} {...route}/>
 })
 
-const NotLoyoutRouter = renderRouteComponent(notLoyoutRouterMap)
-const LoyoutRouter = renderRouteComponent(loyoutRouterMap)
+const ViewRouter = renderRouteComponent(routerMap)
 
-const wrapperRule = css({
-	width: '100%',
-	height: '100%',
-	position: 'absolute',
-	left:0,
-	top:0
-})
+class Router extends React.Component {
+  render () {
+    return (
+      <Switch>
+        {ViewRouter}
+      </Switch>
+    )
+  }
+}
+
+export default Router
