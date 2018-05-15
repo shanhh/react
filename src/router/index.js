@@ -9,7 +9,7 @@
  */
 
 import React from 'react'
-import {Route, Switch} from 'react-router-dom'
+import {Route, Switch, Redirect} from 'react-router-dom'
 import {routerMap} from './config'
 
 const renderRouteComponent = routes => routes.map( (route, index) => {
@@ -23,6 +23,7 @@ class Router extends React.Component {
     return (
       <Switch>
         {ViewRouter}
+        <Redirect from="/" to="/home" />
       </Switch>
     )
   }

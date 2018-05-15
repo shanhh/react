@@ -14,20 +14,19 @@ const _import_components = file => asyncComponent(() => import(`../views/${file}
 
 export const routerMap = [
   { 
-      path: '/', 
-      name: '首页', 
-      exact: true,
-      component: _import_components('Home')
+    path: '/home', 
+    name: '首页', 
+    component: _import_components('Home')
   },
   { 
-      path: '/video', 
-      name: '视频',
-      component: _import_components('Video')
+    path: '/video', 
+    name: '视频',
+    component: _import_components('Video')
   },
   { 
-      path: '/headline', 
-      name: '微头条',
-      component: _import_components('Headline')
+    path: '/headline', 
+    name: '微头条',
+    component: _import_components('Headline')
   },
   { 
     path: '/mine', 
