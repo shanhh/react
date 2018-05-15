@@ -24,7 +24,7 @@ class FootBar extends React.Component {
               <NavLink
                 to={item.path}
                 activeStyle={{
-                  color: 'red'
+                  color: '#f85959'
                 }}
                 key={index}
                 >
