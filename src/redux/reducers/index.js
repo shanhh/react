@@ -1,13 +1,6 @@
-import { handleActions } from 'redux-actions'
+import { combineReducers } from 'redux'
+import * as common from './common'
 
-const configState = {
-  alert: {
-    show: false,
-    content: ''
-  }
-}
-export const config = handleAction({
-  SHOW_ALERT: (state, action) => {
-    
-  }
+export default combineReducers ({
+  ...common
 })
