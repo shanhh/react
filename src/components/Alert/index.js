@@ -26,4 +26,27 @@ export default class extends React.Component {
       show: nextProps.show
     })
   }
+  success () {
+    this.setState({
+      show: false
+    })
+    const {success, hideAlert} = this.props
+    hideAlert()
+    success && success()
+  }
+  render () {
+    let {title, btn, show} = this.state
+    const {content} = this.props
+    return show ? (
+      <div className="dialog-wrapper">
+        <div className="dialog-box">
+          <div className="dialog-hd">
+              <strong>{title}</strong>
+          </div>
+          <div className="dialog-bd">{content}</div>
+          <div className="dialog-ft border-half-top" onClick={this.success()}>{btn}</div>
+        </div>
+      </div>
+    ) : ''
+  }
 }
