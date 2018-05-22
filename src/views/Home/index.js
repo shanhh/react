@@ -1,5 +1,5 @@
 import React from 'react'
-// import connect from '../../utils/connect'
+import connect from '../../utils/connect'
 class Home extends React.Component { 
   constructor (props) {
     super(props)

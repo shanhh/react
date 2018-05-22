@@ -1,4 +1,4 @@
-import actions from 'src/actions'
+import actions from '../redux/actions'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 export default connect(
