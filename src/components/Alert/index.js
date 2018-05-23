@@ -38,9 +38,7 @@ export default class extends React.Component {
   }
   render () {
     let {title, btn, show} = this.state
-    console.log(show)
     const {content} = this.props
-    console.log(content)
     const result = show ? (
       <div className="dialog-wrapper">
         <div className="dialog-box">
@@ -48,7 +46,7 @@ export default class extends React.Component {
               <strong>{title}</strong>
           </div>
           <div className="dialog-bd">{content}</div>
-          <div className="dialog-ft border-half-top" onClick={this.success()}>{btn}</div>
+          <div className="dialog-ft border-half-top" onClick={this.success}>{btn}</div>
         </div>
       </div>
     ) : ''

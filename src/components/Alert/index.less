@@ -8,11 +8,33 @@
   background-color: rgba(0, 0, 0, .3);
   .dialog-box {
     position: absolute;
+    width: 85%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fafafc;
     text-align: center;
     border-radius: 3px;
+    overflow: hidden;
+    .dialog-hd {
+      padding: .16rem 0 .1rem;
+      line-height: .18rem;
+      color: #333;
+    }
+    .dialog-bd {
+      padding: 0 .1rem;
+      font-size: .15rem;
+      color: #888;
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+    .dialog-ft {
+      position: relative;
+      line-height: .42rem;
+      margin-top: .2rem;
+      font-size: .17rem;
+      color: #0bb20c;
+      cursor: pointer;
+    }
   }
 }
