@@ -10,6 +10,9 @@ class Home extends React.Component {
     console.log(this.props)
   
     const {showAlert} = this.props
+    showAlert({
+      content: '测试'
+    })
   }
   render () {
     return (

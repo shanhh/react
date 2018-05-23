@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './index.less'
+import connect from 'connect'
+@connect
 
 export default class extends React.Component {
   constructor (prop) {
@@ -36,8 +38,10 @@ export default class extends React.Component {
   }
   render () {
     let {title, btn, show} = this.state
+    console.log(show)
     const {content} = this.props
-    return show ? (
+    console.log(content)
+    const result = show ? (
       <div className="dialog-wrapper">
         <div className="dialog-box">
           <div className="dialog-hd">
@@ -48,5 +52,6 @@ export default class extends React.Component {
         </div>
       </div>
     ) : ''
+    return result
   }
 }

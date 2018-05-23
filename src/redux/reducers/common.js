@@ -17,5 +17,6 @@ export const config = handleActions({
       show: false,
       content: ''
     }
+    return {...state}
   }
 }, configState)
