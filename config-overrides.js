@@ -11,7 +11,8 @@ module.exports = function override(config, env) {
     'alias': {
       'connect' :   resolve('src/utils/connect.js'),
       'components': resolve('src/components'),
-      'utils':      resolve('src/utils')
+      'utils':      resolve('src/utils'),
+      'server':      resolve('src/server/axios.js'),
     }
   }
   return config;
