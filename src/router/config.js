@@ -32,5 +32,10 @@ export const routerMap = [
     path: '/mine', 
     name: '我的',
     component: _import_components('Mine')
+  },
+  { 
+    path: '/detail/:id/:type', 
+    name: '详情',
+    component: _import_components('Detail')
   }
 ]
